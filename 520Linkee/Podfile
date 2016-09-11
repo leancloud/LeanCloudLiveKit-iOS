@@ -1,0 +1,18 @@
+platform :ios , '7.0'  
+#use_frameworks!  
+target '高仿映客'  do  
+#pod 'AVOSCloud'
+#pod 'AVOSCloudIM'
+#pod "ChatKit", "~> 0.3.0"
+pod 'MBProgressHUD'
+pod "MWPhotoBrowser", "2.1.2"
+pod 'ChatKit', :path => './'
+pod 'BarrageRenderer', "1.8.1"
+#pod 'AFNetworking'
+#pod 'GPUImage'
+#pod 'LFLiveKit'
+pod 'SVProgressHUD'
+pod 'ODRefreshControl'
+#pod 'PLStreamingKit'
+
+ end

@@ -1,0 +1,1 @@
+../../../../ChatKit/Class/Model/LCLKLiveGiftMessage.h
