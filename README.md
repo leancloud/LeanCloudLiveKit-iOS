@@ -1,4 +1,4 @@
-# LeanCloudLiveKit-iOS
+# LiveKit-iOS
 
 演示如何为直播项目添加IM系统，集成 IM 后的效果图如下：
 
