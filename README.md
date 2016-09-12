@@ -19,3 +19,7 @@ Pod安装后，会发现，还是少一个framework： `IJKMediaFramework.framew
 
 详情请参考： [520Linkee](https://github.com/GrayJIAXU/520Linkee)   。
 
+
+## TODO List
+
+现在这个 Demo 还较为简单，仅仅展示了如何为直播 app 集成 IM 模块，大家在 Demo 中看到的直播，是从网上抓包，抓取的直播地址，然后播放的。真正开发时，推流端还是要自己去做，大家可以采用一些第三方的 SDK，比如七牛 SDK，近期会将七牛的 SDK 直接集成进来，这样就真的什么都不用做了。
