@@ -9,11 +9,11 @@
 #import "StartLiveView.h"
 #import "UIView+Add.h"
 #import "UIControl+Add.h"
-#import "LFLiveSession.h"
+//#import "LFLiveSession.h"
 
 #define XJScreenH [UIScreen mainScreen].bounds.size.height
 #define XJScreenW [UIScreen mainScreen].bounds.size.width
-@interface StartLiveView() <LFLiveSessionDelegate>
+@interface StartLiveView() //<LFLiveSessionDelegate>
 
 //美颜
 @property (nonatomic, strong) UIButton *beautyButton;
@@ -29,9 +29,9 @@
 
 @property (nonatomic, strong) UIView *containerView;
 
-@property (nonatomic, strong) LFLiveDebug *debugInfo;
-
-@property (nonatomic, strong) LFLiveSession *session;
+//@property (nonatomic, strong) LFLiveDebug *debugInfo;
+//
+//@property (nonatomic, strong) LFLiveSession *session;
 
 @end
 
@@ -63,82 +63,82 @@ static int padding = 30;
 
 #pragma mark ---- <加载视频录制>
 - (void)requestAccessForVideo{
-    __weak typeof(self) _self = self;
-    AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
-    switch (status) {
-        case AVAuthorizationStatusNotDetermined:{
-            // 许可对话没有出现，发起授权许可
-            [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
-                if (granted) {
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        [_self.session setRunning:YES];
-                    });
-                }
-            }];
-            break;
-        }
-        case AVAuthorizationStatusAuthorized:{
-            // 已经开启授权，可继续
-            [_self.session setRunning:YES];
-            break;
-        }
-        case AVAuthorizationStatusDenied:
-        case AVAuthorizationStatusRestricted:
-            // 用户明确地拒绝授权，或者相机设备无法访问
-            
-            break;
-        default:
-            break;
-    }
+//    __weak typeof(self) _self = self;
+//    AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
+//    switch (status) {
+//        case AVAuthorizationStatusNotDetermined:{
+//            // 许可对话没有出现，发起授权许可
+//            [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
+//                if (granted) {
+//                    dispatch_async(dispatch_get_main_queue(), ^{
+//                        [_self.session setRunning:YES];
+//                    });
+//                }
+//            }];
+//            break;
+//        }
+//        case AVAuthorizationStatusAuthorized:{
+//            // 已经开启授权，可继续
+//            [_self.session setRunning:YES];
+//            break;
+//        }
+//        case AVAuthorizationStatusDenied:
+//        case AVAuthorizationStatusRestricted:
+//            // 用户明确地拒绝授权，或者相机设备无法访问
+//            
+//            break;
+//        default:
+//            break;
+//    }
 }
 
 #pragma mark ---- <加载音频录制>
 - (void)requestAccessForAudio{
-    AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeAudio];
-    switch (status) {
-        case AVAuthorizationStatusNotDetermined:{
-            [AVCaptureDevice requestAccessForMediaType:AVMediaTypeAudio completionHandler:^(BOOL granted) {
-            }];
-            break;
-        }
-        case AVAuthorizationStatusAuthorized:{
-            break;
-        }
-        case AVAuthorizationStatusDenied:
-        case AVAuthorizationStatusRestricted:
-            break;
-        default:
-            break;
-    }
+//    AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeAudio];
+//    switch (status) {
+//        case AVAuthorizationStatusNotDetermined:{
+//            [AVCaptureDevice requestAccessForMediaType:AVMediaTypeAudio completionHandler:^(BOOL granted) {
+//            }];
+//            break;
+//        }
+//        case AVAuthorizationStatusAuthorized:{
+//            break;
+//        }
+//        case AVAuthorizationStatusDenied:
+//        case AVAuthorizationStatusRestricted:
+//            break;
+//        default:
+//            break;
+//    }
 }
 
 
 #pragma mark ---- <LFStreamingSessionDelegate>
 
-/** live status changed will callback */
-- (void)liveSession:(nullable LFLiveSession *)session liveStateDidChange:(LFLiveState)state{
-    
-}
-
-/** live debug info callback */
-- (void)liveSession:(nullable LFLiveSession *)session debugInfo:(nullable LFLiveDebug*)debugInfo{
-    
-}
-
-/** callback socket errorcode */
-- (void)liveSession:(nullable LFLiveSession*)session errorCode:(LFLiveSocketErrorCode)errorCode{
-    
-}
-
-#pragma mark ---- <创建会话>
-- (LFLiveSession*)session{
-    if(!_session){
-        _session = [[LFLiveSession alloc] initWithAudioConfiguration:[LFLiveAudioConfiguration defaultConfiguration] videoConfiguration:[LFLiveVideoConfiguration defaultConfiguration]];
-        _session.running = YES;
-        _session.preView = self;
-    }
-    return _session;
-}
+///** live status changed will callback */
+//- (void)liveSession:(nullable LFLiveSession *)session liveStateDidChange:(LFLiveState)state{
+//    
+//}
+//
+///** live debug info callback */
+//- (void)liveSession:(nullable LFLiveSession *)session debugInfo:(nullable LFLiveDebug*)debugInfo{
+//    
+//}
+//
+///** callback socket errorcode */
+//- (void)liveSession:(nullable LFLiveSession*)session errorCode:(LFLiveSocketErrorCode)errorCode{
+//    
+//}
+//
+//#pragma mark ---- <创建会话>
+//- (LFLiveSession*)session{
+//    if(!_session){
+//        _session = [[LFLiveSession alloc] initWithAudioConfiguration:[LFLiveAudioConfiguration defaultConfiguration] videoConfiguration:[LFLiveVideoConfiguration defaultConfiguration]];
+//        _session.running = YES;
+//        _session.preView = self;
+//    }
+//    return _session;
+//}
 
 #pragma mark ---- <界面容器>
 - (UIView*)containerView{
@@ -182,8 +182,8 @@ static int padding = 30;
         _cameraButton.exclusiveTouch = YES;
         __weak typeof(self) _self = self;
         [_cameraButton addBlockForControlEvents:UIControlEventTouchUpInside block:^(id sender) {
-            AVCaptureDevicePosition devicePositon = _self.session.captureDevicePosition;
-            _self.session.captureDevicePosition = (devicePositon == AVCaptureDevicePositionBack) ? AVCaptureDevicePositionFront : AVCaptureDevicePositionBack;
+//            AVCaptureDevicePosition devicePositon = _self.session.captureDevicePosition;
+//            _self.session.captureDevicePosition = (devicePositon == AVCaptureDevicePositionBack) ? AVCaptureDevicePositionFront : AVCaptureDevicePositionBack;
         }];
     }
     return _cameraButton;
@@ -202,8 +202,8 @@ static int padding = 30;
         _beautyButton.exclusiveTouch = YES;
         __weak typeof(self) _self = self;
         [_beautyButton addBlockForControlEvents:UIControlEventTouchUpInside block:^(id sender) {
-            _self.session.beautyFace = !_self.session.beautyFace;
-            _self.beautyButton.selected = !_self.session.beautyFace;
+//            _self.session.beautyFace = !_self.session.beautyFace;
+//            _self.beautyButton.selected = !_self.session.beautyFace;
         }];
     }
     return _beautyButton;
@@ -227,16 +227,16 @@ static int padding = 30;
         _startLiveButton.exclusiveTouch = YES;
         __weak typeof(self) _self = self;
         [_startLiveButton addBlockForControlEvents:UIControlEventTouchUpInside block:^(id sender) {
-            _self.startLiveButton.selected = !_self.startLiveButton.selected;
-            if(_self.startLiveButton.selected){
-                [_self.startLiveButton setTitle:@"结束直播" forState:UIControlStateNormal];
-                LFLiveStreamInfo *stream = [LFLiveStreamInfo new];
-                stream.url = @"rtmp://daniulive.com:1935/live/stream238";
-                [_self.session startLive:stream];
-            }else{
-                [_self.startLiveButton setTitle:@"开始直播" forState:UIControlStateNormal];
-                [_self.session stopLive];
-            }
+//            _self.startLiveButton.selected = !_self.startLiveButton.selected;
+//            if(_self.startLiveButton.selected){
+//                [_self.startLiveButton setTitle:@"结束直播" forState:UIControlStateNormal];
+//                LFLiveStreamInfo *stream = [LFLiveStreamInfo new];
+//                stream.url = @"rtmp://daniulive.com:1935/live/stream238";
+//                [_self.session startLive:stream];
+//            }else{
+//                [_self.startLiveButton setTitle:@"开始直播" forState:UIControlStateNormal];
+//                [_self.session stopLive];
+//            }
         }];
     }
     return _startLiveButton;

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A313a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Q2A-j4-udd">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="SXp-fM-RVd">
+            <objects>
+                <viewController storyboardIdentifier="PLViewController" id="Q2A-j4-udd" customClass="PLViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8Cz-Rr-0f6"/>
+                        <viewControllerLayoutGuide type="bottom" id="KoY-e1-dqd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0m7-Wd-eoy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Wp-o6-iyt">
+                                <frame key="frameInset" minX="250" minY="536" width="100" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="qPe-NU-zzU"/>
+                                    <constraint firstAttribute="height" constant="44" id="skc-h8-Ssp"/>
+                                </constraints>
+                                <state key="normal" title="Start">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionButtonPressed:" destination="Q2A-j4-udd" eventType="touchUpInside" id="S6F-ko-DkX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7UI-O1-O6c">
+                                <frame key="frameInset" minX="484" minY="536" width="100" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Q2Z-AY-rbm"/>
+                                    <constraint firstAttribute="height" constant="44" id="Svg-Od-aaa"/>
+                                </constraints>
+                                <state key="normal" title="Torch">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="torchButtonPressed:" destination="Q2A-j4-udd" eventType="touchUpInside" id="Wyj-wR-04f"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lf7-ma-gUN">
+                                <frame key="frameInset" minX="16" minY="536" width="104" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="5KI-rB-b6B"/>
+                                    <constraint firstAttribute="width" constant="104" id="ent-FV-bgO"/>
+                                </constraints>
+                                <state key="normal" title="Toggle Camera">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleCameraButtonPressed:" destination="Q2A-j4-udd" eventType="touchUpInside" id="BlZ-Po-aoz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9En-gr-HER">
+                                <frame key="frameInset" minX="484" minY="28" width="100" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="sND-2P-ZaN"/>
+                                    <constraint firstAttribute="height" constant="44" id="uxC-6b-gbt"/>
+                                </constraints>
+                                <state key="normal" title="Mute">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="muteButtonPressed:" destination="Q2A-j4-udd" eventType="touchUpInside" id="zve-bP-xoV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8dF-eZ-dQP">
+                                <frame key="frameInset" minX="16" minY="28" width="100" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="m3S-6k-USi"/>
+                                    <constraint firstAttribute="height" constant="44" id="sse-fI-c0c"/>
+                                </constraints>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="Q2A-j4-udd" eventType="touchUpInside" id="D0e-bD-38q"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9og-ky-hEc">
+                                <frame key="frameInset" minX="20" minY="80" width="560" height="448"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="WHD-zP-WAq">
+                                <frame key="frameInset" minX="225" minY="36" width="150" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="JmV-6c-dbB"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="15fps"/>
+                                    <segment title="24fps"/>
+                                    <segment title="30fps"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControlValueDidChange:" destination="Q2A-j4-udd" eventType="valueChanged" id="Fpt-Sf-M7A"/>
+                                </connections>
+                            </segmentedControl>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="mtj-Mt-tSZ">
+                                <frame key="frameInset" minX="18" minY="490" width="564" height="31"/>
+                                <connections>
+                                    <action selector="zoomSliderValueDidChange:" destination="Q2A-j4-udd" eventType="valueChanged" id="anm-iU-Pf1"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7UI-O1-O6c" firstAttribute="trailing" secondItem="0m7-Wd-eoy" secondAttribute="trailingMargin" id="25x-2K-Q7O"/>
+                            <constraint firstItem="9og-ky-hEc" firstAttribute="leading" secondItem="0m7-Wd-eoy" secondAttribute="leadingMargin" id="32h-aB-oJa"/>
+                            <constraint firstItem="KoY-e1-dqd" firstAttribute="top" secondItem="7Wp-o6-iyt" secondAttribute="bottom" constant="20" id="6jf-d4-UAN"/>
+                            <constraint firstItem="KoY-e1-dqd" firstAttribute="top" secondItem="9og-ky-hEc" secondAttribute="bottom" constant="72" id="H3z-O0-dC4"/>
+                            <constraint firstItem="8dF-eZ-dQP" firstAttribute="leading" secondItem="0m7-Wd-eoy" secondAttribute="leadingMargin" constant="-4" id="Kfa-ZP-aXK"/>
+                            <constraint firstItem="KoY-e1-dqd" firstAttribute="top" secondItem="lf7-ma-gUN" secondAttribute="bottom" constant="20" id="LPE-0O-lCe"/>
+                            <constraint firstItem="KoY-e1-dqd" firstAttribute="top" secondItem="7UI-O1-O6c" secondAttribute="bottom" constant="20" id="LSv-5p-2hj"/>
+                            <constraint firstItem="7Wp-o6-iyt" firstAttribute="top" secondItem="mtj-Mt-tSZ" secondAttribute="bottom" constant="16" id="Oyb-Ji-AFt"/>
+                            <constraint firstItem="8dF-eZ-dQP" firstAttribute="top" secondItem="8Cz-Rr-0f6" secondAttribute="bottom" constant="8" id="PHa-8g-lol"/>
+                            <constraint firstItem="9og-ky-hEc" firstAttribute="top" secondItem="8Cz-Rr-0f6" secondAttribute="bottom" constant="60" id="Zg6-S2-LwM"/>
+                            <constraint firstItem="9En-gr-HER" firstAttribute="top" secondItem="8Cz-Rr-0f6" secondAttribute="bottom" constant="8" id="Zkk-fI-JmR"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="mtj-Mt-tSZ" secondAttribute="leading" id="aFN-DF-eqe"/>
+                            <constraint firstItem="WHD-zP-WAq" firstAttribute="centerX" secondItem="0m7-Wd-eoy" secondAttribute="centerX" id="aoe-IE-211"/>
+                            <constraint firstItem="mtj-Mt-tSZ" firstAttribute="centerX" secondItem="0m7-Wd-eoy" secondAttribute="centerX" id="kib-6W-4Rc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9og-ky-hEc" secondAttribute="trailing" id="pGk-OZ-lc4"/>
+                            <constraint firstItem="WHD-zP-WAq" firstAttribute="top" secondItem="8Cz-Rr-0f6" secondAttribute="bottom" constant="16" id="ph1-vf-7nO"/>
+                            <constraint firstAttribute="centerX" secondItem="7Wp-o6-iyt" secondAttribute="centerX" id="qIS-eM-4CY"/>
+                            <constraint firstItem="9En-gr-HER" firstAttribute="trailing" secondItem="0m7-Wd-eoy" secondAttribute="trailingMargin" id="v1C-TP-Kht"/>
+                            <constraint firstItem="lf7-ma-gUN" firstAttribute="leading" secondItem="0m7-Wd-eoy" secondAttribute="leadingMargin" id="zSk-MF-vJm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="actionButton" destination="7Wp-o6-iyt" id="vmu-sI-nNX"/>
+                        <outlet property="muteButton" destination="9En-gr-HER" id="1Uo-1c-QDc"/>
+                        <outlet property="segementedControl" destination="WHD-zP-WAq" id="hSE-6A-2ER"/>
+                        <outlet property="textView" destination="9og-ky-hEc" id="JHP-P3-qyf"/>
+                        <outlet property="toggleCameraButton" destination="lf7-ma-gUN" id="3LF-NR-Eqw"/>
+                        <outlet property="torchButton" destination="7UI-O1-O6c" id="BYJ-Pr-6w8"/>
+                        <outlet property="zoomSlider" destination="mtj-Mt-tSZ" id="tLj-kx-AtN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wmw-oA-DbG" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1358" y="378"/>
+        </scene>
+    </scenes>
+</document>

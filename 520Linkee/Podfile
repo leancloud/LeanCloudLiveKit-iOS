@@ -9,10 +9,10 @@ pod "MWPhotoBrowser", "2.1.2"
 pod 'ChatKit', :path => './'
 pod 'BarrageRenderer', "1.8.1"
 #pod 'AFNetworking'
-#pod 'GPUImage'
+pod 'GPUImage'
 #pod 'LFLiveKit'
 pod 'SVProgressHUD'
 pod 'ODRefreshControl'
-#pod 'PLStreamingKit'
+pod 'PLStreamingKit'
 
  end

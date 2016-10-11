@@ -9,6 +9,7 @@
 #import "CameraViewController.h"
 #import "StartLiveView.h"
 #import "GPUImageGaussianBlurFilter.h"
+#import "PLViewController.h"
 
 @interface CameraViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundView;
@@ -64,11 +65,23 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void)displayContentController:(UIViewController *)content {
+    [self addChildViewController:content];                 // 1
+    content.view.bounds = self.view.bounds;                 //2
+    [self.view addSubview:content.view];
+    [content didMoveToParentViewController:self];          // 3
+}
+
 //开始直播采集
 - (IBAction)startLiveStream {
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:NSStringFromClass([PLViewController class])
+                                                  bundle:nil];
+    PLViewController *viewController = [sb instantiateViewControllerWithIdentifier:NSStringFromClass([PLViewController class])];
     
-    StartLiveView *view = [[StartLiveView alloc] initWithFrame:self.view.bounds];
-    [self.view addSubview:view];
+//    PLViewController *viewController = [[PLViewController alloc] init];
+    [self displayContentController:viewController];
+//    StartLiveView *view = [[StartLiveView alloc] initWithFrame:self.view.bounds];
+//    [self.view addSubview:view];
     
     _backBtn.hidden = YES;
     _middleView.hidden = YES;
