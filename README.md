@@ -1,6 +1,5 @@
 # LiveKit-iOS
 
-
 <p align="center">
 ![enter image description here](https://img.shields.io/badge/platform-iOS%208.0%2B-ff69b5618733984.svg) 
 <a href="https://github.com/leancloud/ChatKit-OC/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-green.svg?style=flat"></a>
@@ -54,7 +53,7 @@ git clone --depth=1 https://github.com/leancloud/LeanCloudLiveKit-iOS.git
     │   │       ├── Category
     │   │       ├── Controller
     │   │       └── View
-    │   ├── LiveChat
+    │   ├── LiveChat                               #推流端和播放端
     │       ├── Model
     │       ├── Resources
     │       │   ├── Gift
@@ -65,7 +64,7 @@ git clone --depth=1 https://github.com/leancloud/LeanCloudLiveKit-iOS.git
     │       │   └── MBProgressHUD
     │       └── View
     └── Pods
-    ├── ChatKit
+    ├── ChatKit                                    #IM系统
         └── Class
         ├── Model
         ├── Module
@@ -79,7 +78,7 @@ git clone --depth=1 https://github.com/leancloud/LeanCloudLiveKit-iOS.git
 
 ## 使用方法
 
-本通过 CocoaPods 管理依赖
+本库通过 CocoaPods 管理依赖。
 
 > CocoaPods 是目前最流行的 Cocoa 项目库依赖管理工具之一，考虑到便捷与项目的可维护性，我们更推荐您使用 CocoaPods 导入并管理 SDK。
 
@@ -104,40 +103,12 @@ git clone --depth=1 https://github.com/leancloud/LeanCloudLiveKit-iOS.git
      sudo gem install cocoapods
   ```
 
- 2. 查询 CocoaPods 源中的本库
+ 2. 使用 CocoaPods 导入
 
-  在终端中运行以下命令：
-
-  ```shell
-     pod search LiveKit
-  ```
- 
-   这里注意，这个命令搜索的是本机上的最新版本，并没有联网查询。如果运行以上命令，没有搜到或者搜不到最新版本，您可以运行以下命令，更新一下您本地的 CocoaPods 源列表。
-
-  ```shell
-     pod repo update
-  ```
- 
- 3. 使用 CocoaPods 导入
-
-  打开终端，进入到您的工程目录，执行以下命令，会自动生成一个 Podfile 文件。
-
-  ```shell
-     pod init
-  ```
-
-  然后使用 CocoaPods 进行安装。如果尚未安装 CocoaPods，运行以下命令进行安装：
+  打开终端，然后使用 CocoaPods 进行安装。如果尚未安装 CocoaPods，运行以下命令进行安装：
 
  ```shell
     gem install cocoapods
- ```
-
-  打开 Podfile，在您项目的 target 下加入以下内容。（在此以 v1.0.0 版本为例）
-
-  在文件 `Podfile` 中加入以下内容：
-
- ```shell
-    pod 'LiveKit', '1.0.0'
  ```
 
   然后在终端中运行以下命令：
@@ -157,73 +128,29 @@ git clone --depth=1 https://github.com/leancloud/LeanCloudLiveKit-iOS.git
 
   完成后，CocoaPods 会在您的工程根目录下生成一个 `.xcworkspace` 文件。您需要通过此文件打开您的工程，而不是之前的 `.xcodeproj`。
 
-  如果不想使用 CocoaPods 进行集成，也可以选择使用源码集成。
-
-
-然后在需要的地方导入 LiveKit：
-
-  ```Objective-C
-//TODO
-//...
-  ```
-
-
-**CocoaPods 使用说明**
-
-**指定 SDK 版本** 
-
-CocoaPods 中，有几种设置 SDK 版本的方法。如：
-
-`>= 1.0.0` 会根据您本地的 CocoaPods 源列表，导入不低于 1.0.0 版本的 SDK。
-`~> 1.0.0` 会根据您本地的 CocoaPods 源列表，介于 1.0.0~1.2.0 之前版本的 SDK。
-我们建议您锁定版本，便于团队开发。如，指定 1.0.0 版本。
-
- ```shell
-pod 'LiveKit', '1.0.0'
- ```
-
- - 升级本地 CocoaPods 源
-
-  `CocoaPods 有一个中心化的源，默认本地会缓存 CocoaPods 源服务器上的所有 SDK 版本。
-
- 如果搜索的时候没有搜到融云的 SDK 或者搜不到最新的 SDK 版本，可以执行以下命令更新一下本地的缓存。
-
- ```shell
-pod repo update
- ```
- 
- - 升级工程的 SDK 版本
-
- 更新您工程目录中 Podfile 指定的 SDK 版本后，在终端中执行以下命令。
- ```shell
-pod update
- ```
-
-
- - 清除 Cocoapods 本地缓存
-
- 特殊情况下，由于网络或者别的原因，通过 CocoaPods 下载的文件可能会有问题。
-
- 这时候您可以删除 CocoaPods 的缓存(~/Library/Caches/CocoaPods/Pods/Release 目录)，再次导入即可。
-
- - 查看当前使用的 SDK 版本
-
- 您可以在 Podfile.lock 文件中看到您工程中使用的 SDK 版本。
-
- 关于 CocoaPods 的更多内容，您可以参考 [CocoaPods 文档](https://cocoapods.org/)。
-
-
-
-
-如果提示找不到库，则可去掉 `--no-repo-update`。
 
 Pod安装后，会发现，还是少一个framework：`IJKMediaFramework.framework` ,在文档上文中的项目结构部分有标注。可以到这里下载，编译好的版本 ：https://pan.baidu.com/s/1eSBLDpK
 
-## TODO List
+## 推流端与播放端
 
-现在这个 Demo 还较为简单，仅仅展示了如何为直播 app 集成 IM 模块，大家在 Demo 中看到的直播，是从网上抓包，抓取的直播地址，然后播放的。真正开发时，推流端还是要自己去做，大家可以采用一些第三方的 SDK，比如七牛 SDK，近期会将七牛的 SDK 直接集成进来，这样就真的什么都不用做了。
+### 推流端配置
 
-LiveKit在实现过程中参考了下面的开元项目：
+Demo 中使用了七牛 SDK 的推流端，具体配置方法需要参考：
+ 
+  1. [《七牛开发者中心-API文档》]( http://developer.qiniu.com/article/index.html#pili-api-handbook ) 
+  2. [《2小时搞定移动直播 App 开发》](http://www.imooc.com/learn/707?sukey=f740b693ad416b27703fbe1bfb6cc97b973f0a33f4b940c57d8ba98cf76ac97363149884f0b55604da9f6135c6942f40) 视频教程
+  
+播放端是采用的通用的直播组件，Demo 中实时播放的直播地址，是从网上抓包抓取的直播地址。如果想观看推流端的直播视频，直接替换 URL 地址就可以达到效果。
+
+播放端和推流端的代码位置，在上文的项目项目结构部分已经标注出。
+
+## IM 系统配置
+
+IM 部分的配置需要参考：[ChatKit-OC](https://github.com/leancloud/ChatKit-OC) 。
+
+IM 系统的的代码位置，在上文的项目项目结构部分已经标注出。
+
+**参考到的开源项目**
 
 主要是两个部分：
 
