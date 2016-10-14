@@ -84,26 +84,26 @@ git clone --depth=1 https://github.com/leancloud/LeanCloudLiveKit-iOS.git
 
 ### CocoaPods 导入
 
- 1. CocoaPods 安装
+  1. CocoaPods 安装
 
   如果您的机器上已经安装了 CocoaPods，直接进入下一步即可。
 
   如果您的网络已经翻墙，在终端中运行如下命令直接安装：
 
-  ```shell
+ ```shell
      sudo gem install cocoapods
-  ```
+ ```
 
    如果您的网络不能翻墙，可以通过淘宝的 RubyGems 镜像 进行安装。
 
    在终端依次运行以下命令：
 
-  ```shell
+ ```shell
      gem sources --add https://ruby.taobao.org/ --remove https://rubygems.org/
      sudo gem install cocoapods
-  ```
+ ```
 
- 2. 使用 CocoaPods 导入
+  2. 使用 CocoaPods 导入
 
    打开终端，然后使用 CocoaPods 进行安装。如果尚未安装 CocoaPods，运行以下命令进行安装：
 
