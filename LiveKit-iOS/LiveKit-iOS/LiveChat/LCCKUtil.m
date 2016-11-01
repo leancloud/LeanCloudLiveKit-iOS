@@ -27,8 +27,6 @@
     NSError *error = [NSError errorWithDomain:@"LeanCloudChatKitExample"
                                          code:code
                                      userInfo:errorInfo];
-    
-    
     return error;
 }
 

@@ -44,7 +44,6 @@
 		9A8EAA1F1DAE16F300566F8D /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A8EA8FD1DAE16F300566F8D /* UIProgressView+AFNetworking.m */; };
 		9A8EAA201DAE16F300566F8D /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A8EA8FF1DAE16F300566F8D /* UIRefreshControl+AFNetworking.m */; };
 		9A8EAA211DAE16F300566F8D /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A8EA9011DAE16F300566F8D /* UIWebView+AFNetworking.m */; };
-		9A8EAA221DAE16F300566F8D /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8EA9021DAE16F300566F8D /* IJKMediaFramework.framework */; };
 		9A8EAA231DAE16F300566F8D /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8EA9571DAE16F300566F8D /* libcrypto.a */; };
 		9A8EAA241DAE16F300566F8D /* librtmp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8EA9581DAE16F300566F8D /* librtmp.a */; };
 		9A8EAA251DAE16F300566F8D /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8EA9591DAE16F300566F8D /* libssl.a */; };
@@ -156,6 +155,7 @@
 		9A8EAA8F1DAE16F300566F8D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A8EA9F81DAE16F300566F8D /* ViewController.m */; };
 		9A8EAA901DAE16F300566F8D /* LaunchScreen.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A8EA9F91DAE16F300566F8D /* LaunchScreen.strings */; };
 		9A8EAA911DAE16F300566F8D /* Main.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A8EA9FB1DAE16F300566F8D /* Main.strings */; };
+		9AB37B341DC871AF000782F2 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB37B331DC871AF000782F2 /* IJKMediaFramework.framework */; };
 		B55D49481D26DD9B00E3FFE4 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B55D49471D26DD9B00E3FFE4 /* Accelerate.framework */; };
 		B55D494A1D26DDA300E3FFE4 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B55D49491D26DDA300E3FFE4 /* VideoToolbox.framework */; };
 		B55D494C1D26DDB500E3FFE4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B55D494B1D26DDB500E3FFE4 /* QuartzCore.framework */; };
@@ -249,7 +249,6 @@
 		9A8EA8FF1DAE16F300566F8D /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		9A8EA9001DAE16F300566F8D /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		9A8EA9011DAE16F300566F8D /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
-		9A8EA9021DAE16F300566F8D /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
 		9A8EA9061DAE16F300566F8D /* amf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = amf.h; sourceTree = "<group>"; };
 		9A8EA9071DAE16F300566F8D /* http.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = http.h; sourceTree = "<group>"; };
 		9A8EA9081DAE16F300566F8D /* log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = log.h; sourceTree = "<group>"; };
@@ -478,6 +477,7 @@
 		9A8EA9FA1DAE16F300566F8D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		9A8EA9FC1DAE16F300566F8D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		9A8EAA921DAE1F2700566F8D /* LiveKit-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "LiveKit-iOS.entitlements"; sourceTree = "<group>"; };
+		9AB37B331DC871AF000782F2 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IJKMediaFramework.framework; path = ../../../../../Framework/IJKMediaFramework.framework; sourceTree = "<group>"; };
 		AEA7D6E667400497D1E2715D /* Pods-高仿映客.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-高仿映客.debug.xcconfig"; path = "Pods/Target Support Files/Pods-高仿映客/Pods-高仿映客.debug.xcconfig"; sourceTree = "<group>"; };
 		B55D478C1D23ED7600E3FFE4 /* LiveKit-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LiveKit-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B55D49471D26DD9B00E3FFE4 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
@@ -495,7 +495,6 @@
 		B55D495F1D26E29600E3FFE4 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		B5C0BFAE1D28BBD6002F5D26 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B5C0BFB01D28BBED002F5D26 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		BDCBAF49A0F454A8CF4785F9 /* libPods-高仿映客.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-高仿映客.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C20F7FA089A2436B3332F833 /* Pods-LiveKit-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveKit-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-LiveKit-iOS/Pods-LiveKit-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		DCD68DBE18004A2BE9360229 /* libPods-LiveKit-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LiveKit-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -508,6 +507,7 @@
 				B5C0BFB11D28BBED002F5D26 /* Foundation.framework in Frameworks */,
 				B5C0BFAF1D28BBD6002F5D26 /* UIKit.framework in Frameworks */,
 				9A8EAA251DAE16F300566F8D /* libssl.a in Frameworks */,
+				9AB37B341DC871AF000782F2 /* IJKMediaFramework.framework in Frameworks */,
 				B55D49601D26E29600E3FFE4 /* libz.tbd in Frameworks */,
 				B55D495E1D26E29400E3FFE4 /* libbz2.tbd in Frameworks */,
 				B55D495C1D26E28700E3FFE4 /* AVFoundation.framework in Frameworks */,
@@ -523,7 +523,6 @@
 				B55D494C1D26DDB500E3FFE4 /* QuartzCore.framework in Frameworks */,
 				B55D494A1D26DDA300E3FFE4 /* VideoToolbox.framework in Frameworks */,
 				B55D49481D26DD9B00E3FFE4 /* Accelerate.framework in Frameworks */,
-				9A8EAA221DAE16F300566F8D /* IJKMediaFramework.framework in Frameworks */,
 				C1CC0F7D354A1519C5D527D8 /* libPods-LiveKit-iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -545,7 +544,6 @@
 		99C34B67AEB53155836F3F2C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BDCBAF49A0F454A8CF4785F9 /* libPods-高仿映客.a */,
 				DCD68DBE18004A2BE9360229 /* libPods-LiveKit-iOS.a */,
 			);
 			name = Frameworks;
@@ -703,8 +701,8 @@
 		9A8EA8DA1DAE16F300566F8D /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				9AB37B331DC871AF000782F2 /* IJKMediaFramework.framework */,
 				9A8EA8DB1DAE16F300566F8D /* AFNetworking */,
-				9A8EA9021DAE16F300566F8D /* IJKMediaFramework.framework */,
 				9A8EA9031DAE16F300566F8D /* librtmp-iOS */,
 				9A8EA95C1DAE16F300566F8D /* NetWorkEngine */,
 				9A8EA95F1DAE16F300566F8D /* XJScrollerHiddenBar */,
@@ -1203,12 +1201,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B55D47A31D23ED7600E3FFE4 /* Build configuration list for PBXNativeTarget "LiveKit-iOS" */;
 			buildPhases = (
+				DC5309366AFC850FD3BDC817 /* 📦 Check Pods Manifest.lock */,
 				FE25C6D01B56D276C7F1751A /* [CP] Check Pods Manifest.lock */,
 				B55D47881D23ED7600E3FFE4 /* Sources */,
 				B55D47891D23ED7600E3FFE4 /* Frameworks */,
 				B55D478A1D23ED7600E3FFE4 /* Resources */,
 				910A7B672EC4FEA6808FEF9F /* [CP] Embed Pods Frameworks */,
 				1BD3110A5DAE64CB145A5772 /* [CP] Copy Pods Resources */,
+				16861BD80D228393360DE8D5 /* 📦 Embed Pods Frameworks */,
+				4B3BA156762950B5477A936E /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1346,6 +1347,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		16861BD80D228393360DE8D5 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LiveKit-iOS/Pods-LiveKit-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		1BD3110A5DAE64CB145A5772 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1354,6 +1370,21 @@
 			inputPaths = (
 			);
 			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LiveKit-iOS/Pods-LiveKit-iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B3BA156762950B5477A936E /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1374,6 +1405,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LiveKit-iOS/Pods-LiveKit-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC5309366AFC850FD3BDC817 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		FE25C6D01B56D276C7F1751A /* [CP] Check Pods Manifest.lock */ = {
@@ -1609,7 +1655,6 @@
 					"$(PROJECT_DIR)/Framework",
 					"$(PROJECT_DIR)/LiveKit-iOS/Class/Live/View",
 					"$(PROJECT_DIR)/LiveKit-iOS/Class/Main/Libs",
-					"$(PROJECT_DIR)/LiveKit-iOS/Class/Main/Libs",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/LiveKit-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1641,7 +1686,6 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Framework",
 					"$(PROJECT_DIR)/LiveKit-iOS/Class/Live/View",
-					"$(PROJECT_DIR)/LiveKit-iOS/Class/Main/Libs",
 					"$(PROJECT_DIR)/LiveKit-iOS/Class/Main/Libs",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/LiveKit-iOS/Info.plist";

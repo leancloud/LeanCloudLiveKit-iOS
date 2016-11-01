@@ -44,7 +44,9 @@
 @property (nonatomic, strong) NSArray *fireworksArray;
 
 @property (nonatomic, weak) CALayer *fireworksL;
+
 @property (nonatomic, strong) LCCKConversationViewController *conversationViewController;
+
 @property (nonatomic, strong) NSTimer *timer;
 
 @end
