@@ -88,13 +88,13 @@ git clone --depth=1 https://github.com/leancloud/LeanCloudLiveKit-iOS.git
 
   如果您的机器上已经安装了 CocoaPods，直接进入下一步即可。
 
-  如果您的网络已经翻墙，在终端中运行如下命令直接安装：
+  如果您的网络能够访问 CocoaPods 服务器，在终端中运行如下命令直接安装：
 
  ```shell
      sudo gem install cocoapods
  ```
 
-   如果您的网络不能翻墙，可以通过淘宝的 RubyGems 镜像 进行安装。
+   如果您的网络不能访问 CocoaPods 服务器，可以通过淘宝的 RubyGems 镜像 进行安装。
 
    在终端依次运行以下命令：
 
@@ -131,13 +131,14 @@ git clone --depth=1 https://github.com/leancloud/LeanCloudLiveKit-iOS.git
 
 Pod安装后，会发现，还是少一个framework：`IJKMediaFramework.framework` ,在文档上文中的项目结构部分有标注。可以到这里下载，编译好的版本 ：https://pan.baidu.com/s/1eSBLDpK
 
+
 ## 推流端与播放端
 
 ### 推流端配置
 
 Demo 中使用了七牛 SDK 的推流端，具体配置方法需要参考：
  
-  1. [《七牛开发者中心-API文档》]( http://developer.qiniu.com/article/index.html#pili-api-handbook ) 
+  1. [《七牛开发者中心-API文档》](http://developer.qiniu.com/article/index.html#pili-api-handbook) 
   2. [《2小时搞定移动直播 App 开发》](http://www.imooc.com/learn/707?sukey=f740b693ad416b27703fbe1bfb6cc97b973f0a33f4b940c57d8ba98cf76ac97363149884f0b55604da9f6135c6942f40) 视频教程
   
 播放端是采用的通用的直播组件，Demo 中实时播放的直播地址，是从网上抓包抓取的直播地址。如果想观看推流端的直播视频，直接替换 URL 地址就可以达到效果。
