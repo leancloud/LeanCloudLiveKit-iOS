@@ -145,6 +145,7 @@ NSString * const repeateClickTabBarButtonNote = @"repeateClickTabBarButton";
     [[UITabBar appearance] setShadowImage:[UIImage new]];
     [[UITabBar appearance] setBackgroundImage:[[UIImage alloc]init]];
 }
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 
 #pragma mark ---- <添加所有的子控制>
 - (void)setupAllViewController {
@@ -158,7 +159,9 @@ NSString * const repeateClickTabBarButtonNote = @"repeateClickTabBarButton";
     //Camera
     CameraViewController *cameraVc = [[CameraViewController alloc] init];
     MainNavigationController *cameraNav = [[MainNavigationController alloc] initWithRootViewController:cameraVc];
-    
+    if(SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"10.0")) {
+        cameraVc = [UIViewController new];
+    }
     [self addChildViewController:cameraNav];
     
     //Main

@@ -98,13 +98,7 @@
     
     [[LCLKLiveService sharedInstance] fetchConversationIfNeededForLiveId:self.liveUrl callback:^(AVIMConversation *conversation, NSError *error) {
         if (conversation) {
-            // 创建按钮
             LCCKConversationViewController *conversationViewController = [self exampleOpenConversationViewControllerWithConversaionId:conversation.conversationId fromNavigationController:nil];
-            //    [self addChildViewController:conversationViewController];
-            //    [self.view addSubview:conversationViewController.view];
-            //    [conversationViewController.view mas_makeConstraints:^(MASConstraintMaker *make) {
-            //        make.edges.equalTo(self.view);
-            //    }];
             [self displayContentController:conversationViewController];
             [self.view addSubview:conversationViewController.renderer.view];
         }
