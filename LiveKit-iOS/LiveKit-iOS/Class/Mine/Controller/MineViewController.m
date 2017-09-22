@@ -78,7 +78,7 @@
     [headView makeConstraints:^(MASConstraintMaker *make) {
         //headView约束
         make.top.left.right.equalTo(introView);
-        make.bottom.equalTo(middleView.top);
+        make.height.equalTo(240);
     }];
     
     [self.view addSubview:introView];
