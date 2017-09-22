@@ -118,7 +118,7 @@
 - (void)displayContentController:(UIViewController *)content; {
     [self addChildViewController:content];                 // 1
     content.view.bounds = self.view.bounds;                 //2
-    [self.view addSubview:content.view];
+    [self.view insertSubview:content.view atIndex:0];
     [content didMoveToParentViewController:self];          // 3
 }
 
@@ -131,7 +131,8 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    [self goBack];
+    
+    [self.player shutdown];
 }
 
 #pragma mark ---- <设置加载视图>
@@ -203,7 +204,7 @@
 // 返回
 - (void)goBack {
     // 停播
-    [self.player shutdown];
+    
     [self.navigationController popViewControllerAnimated:true];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
